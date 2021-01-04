@@ -14,7 +14,6 @@ echo "RSS Reader will be executed\n";
 $fileNameArgumentIndex = array_search(basename(__FILE__), $argv);
 if ($fileNameArgumentIndex !== false) unset($argv[$fileNameArgumentIndex]);
 $argv = array_values($argv);
-$file = "Dupa" . DIRECTORY_SEPARATOR . "dupa.txt";
 
 Main::execute($argv);
 
