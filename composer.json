@@ -1,0 +1,37 @@
+{
+    "name": "sammyk/package-skeleton",
+    "description": "A skeleton package to use as a base",
+    "keywords": ["skeleton"],
+    "homepage": "https://github.com/SammyK/package-skeleton",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sammy Kaye Powers",
+            "email": "sammyk@sammykmedia.com",
+            "homepage": "http://sammyk.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+      "ext-simplexml": "*",
+        "ext-libxml": "*",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "mockery/mockery": "dev-master@dev",
+        "phpunit/phpunit": "9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "KrzysztofBednarskiRekrutacjaHRtec\\FeedRSS\\": "src/",
+            "KrzysztofBednarskiRekrutacjaHRtec\\FeedRSS\\Exceptions\\": "src/Exceptions"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KrzysztofBednarskiRekrutacjaHRtec\\Tests\\": "tests/"
+
+        }
+    }
+}
