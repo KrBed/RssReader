@@ -1,4 +1,4 @@
-Package Skeleton
+RSS-Reader
 ================
 
 [![Build Status](http://img.shields.io/travis/SammyK/package-skeleton.svg)](https://travis-ci.org/SammyK/package-skeleton)
