@@ -52,7 +52,7 @@ class Main
   /**
    * It return a string with welcome message, version info and avaliable arguments
    */
-  public static function helpMessageScreen()
+  public static function helpMessageScreen(): void
   {
     echo("\r");
     echo "\n| Arguments lists: \n";
@@ -74,15 +74,15 @@ class Main
    */
   public static function execute($arguments = []): void
   {
+    if(($arguments[0] === AppSettings::CMD_HELP )){
+      self::helpMessageScreen();
+      die();
+    }
     echo "Checking internet connection \n";
     self::checkInterneConnection();
     echo "Internet connection OK";
 
     $settings = self::detectArguments($arguments);
-    if ($settings->getCommand() === AppSettings::CMD_HELP) {
-      self::helpMessageScreen();
-      die();
-    }
     echo "+ Connecting to  RSS Reader...\n";
 
     $service = new ReaderService();
