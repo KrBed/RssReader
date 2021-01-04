@@ -9,15 +9,14 @@ RSS-Reader
 Uruchomienie
 ------------
 
-Po pobraniu projektu wywołujemy komendę composer install
-Następnie composer dump-autoload - aktualizacja namespace
+Po pobraniu projektu wywołujemy komendę "composer install"
+Następnie composer "dump-autoload" - aktualizacja namespace
 
 Aby uruchomić aplikacje należy wejść do folderu /src 
 uruchamiamy komendą php console.php [komenda] [url] [ścieżka do zapisu]
 Parametry trzeba oddzielić spacjią
 Wpisanie komendy "--?" uruchomi help screen
 
- 
 Testy
 -------
 
