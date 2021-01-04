@@ -109,7 +109,7 @@ class AppSettingsValidatorTest extends TestCase
   public function testShouldReturnTrueWhenPathIsCorrect()
   {
     //Given
-    $path = __DIR__ . '\test.csv';
+    $path = __DIR__ . DIRECTORY_SEPARATOR . 'test.csv';
     //When
     $actual = AppSettingsValidator::validatePath($path);;
     //Then
@@ -119,7 +119,7 @@ class AppSettingsValidatorTest extends TestCase
   public function testShouldReturnFalseWhenPathIsNotCorrect()
   {
     //Given
-    $path = 'fail\test.csv';
+    $path = 'fail' . DIRECTORY_SEPARATOR . '\test.csv';
     //When
     $actual = AppSettingsValidator::validatePath($path);
     //Then
@@ -129,7 +129,7 @@ class AppSettingsValidatorTest extends TestCase
   public function testShouldAddInvalidPathErrorMessageToValidationErrorsArrayWhenPathIsNotCorrect()
   {
     //Given
-    $path = '\fail\test.csv';
+    $path = 'fail' . DIRECTORY_SEPARATOR . 'test.csv';
     $message = "--- Path to save csv file is invalid {$path} ---";
     $key = InvalidPathException::class;
     //When

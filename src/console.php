@@ -2,16 +2,20 @@
 
 
 use KrzysztofBednarskiRekrutacjaHRtec\FeedRSS\Classes\RssSchema;
+
 //use KrzysztofBednarskiRekrutacjaHRtec\FeedRSS\Feed;
 use KrzysztofBednarskiRekrutacjaHRtec\FeedRSS\Main;
+
 //use Spatie\SimpleExcel\SimpleExcelWriter;
 
 include '../vendor/autoload.php';
 echo "RSS Reader will be executed\n";
 
 $fileNameArgumentIndex = array_search(basename(__FILE__), $argv);
-if ($fileNameArgumentIndex!==false) unset($argv[$fileNameArgumentIndex]);
+if ($fileNameArgumentIndex !== false) unset($argv[$fileNameArgumentIndex]);
 $argv = array_values($argv);
+$file = "Dupa" . DIRECTORY_SEPARATOR . "dupa.txt";
+
 Main::execute($argv);
 
 //$result = Feed::load('https://blog.nationalgeographic.org/feed/');

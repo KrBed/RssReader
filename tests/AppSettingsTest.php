@@ -72,7 +72,7 @@ class AppSettingsTest extends TestCase
   public function testShouldReturnNullIfPathWasNotSetSuccessfully()
   {
     //Given  zmienne wejściowe wyjściowe
-    $path = __DIR__ . 'test\test.csv';
+    $path = __DIR__ . 'test' . DIRECTORY_SEPARATOR . 'test.csv';
     //When wywoływanie metody testowanej
     $this->settings->setPath($path);
     $actual = $this->settings->getPath();
@@ -83,7 +83,7 @@ class AppSettingsTest extends TestCase
   public function testShouldReturnPathIfPathWasSetSuccessfully()
   {
     //Given
-    $path = __DIR__ . '\test.csv';
+    $path = __DIR__ . DIRECTORY_SEPARATOR .'\test.csv';
     //When
     $this->settings->setPath($path);
     $actual = $this->settings->getPath();

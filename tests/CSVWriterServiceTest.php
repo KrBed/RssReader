@@ -14,7 +14,7 @@ class CSVWriterServiceTest extends TestCase
   /** @var AppSettings */
   private $settings;
   private $command = "csv:simple";
-  private $path = __DIR__ . '\testFile.csv';
+  private $path = __DIR__ . DIRECTORY_SEPARATOR .'testFile.csv';
   private $url = "https://blog.nationalgeographic.org/rss";
   private $publication;
   /**
