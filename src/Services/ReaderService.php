@@ -45,7 +45,6 @@ class ReaderService
     self::adjustNamespaces($xml);
     foreach ($xml->channel->item as $item) {
       self::adjustNamespaces($item);
-      var_dump($item);
     }
 
     foreach ($xml->channel->item as $item) {
