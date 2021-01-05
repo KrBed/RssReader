@@ -80,7 +80,7 @@ class Main
     }
     echo "Checking internet connection \n";
     self::checkInterneConnection();
-    echo "Internet connection OK";
+    echo "Internet connection OK... \n";
 
     $settings = self::detectArguments($arguments);
     echo "+ Connecting to  RSS Reader...\n";
